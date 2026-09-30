@@ -6,7 +6,7 @@
 <title>BalanceFeed – Achtsamer Alltagsbegleiter für Android</title>
 <meta name="description" content="BalanceFeed gibt dir jeden Tag persönliche Impulse für mehr Balance – abgestimmt auf Wetter, Herzfrequenz, Schritte und wissenschaftliche Selbst-Checks. Kostenlos, ohne Werbung, Daten bleiben auf deinem Gerät.">
 <link rel="canonical" href="https://kasianovb.github.io/">
-<link rel="icon" href="img/icon.webp">
+<link rel="icon" href="img/app_icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BalanceFeed – Achtsamer Alltagsbegleiter">
 <meta property="og:description" content="Ein Tipp pro Tag, abgestimmt auf Wetter, Puls und Schritte. Kostenlos für Android.">
@@ -35,9 +35,12 @@
 *{box-sizing:border-box}
 body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
 .w{max-width:960px;margin:0 auto;padding:0 20px}
-header.hero{padding:64px 0 40px;text-align:center}
+header.hero{position:relative;padding:64px 0 40px;text-align:center;overflow:hidden}
+header.hero .bg{position:absolute;inset:0;background:url(img/onboarding_bg.jpg) center/cover;opacity:.3;z-index:0}
+header.hero>.w{position:relative;z-index:1}
 header.hero img.banner{display:block;width:100%;max-width:760px;height:auto;margin:0 auto 12px;border-radius:24px}
-h1{font-size:clamp(2rem,6vw,3rem);margin:16px 0 8px;line-height:1.15}
+.appicon{width:72px;height:72px;border-radius:20px;display:block;margin:0 auto}
+h1{font-size:clamp(2rem,6vw,3rem);margin:12px 0 8px;line-height:1.15}
 .sub{color:var(--muted);max-width:620px;margin:0 auto 28px}
 .btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:999px}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
@@ -61,8 +64,11 @@ footer a{color:var(--muted)}
 </style>
 </head>
 <body>
-<header class="hero"><div class="w">
+<header class="hero">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="w">
   <img class="banner" src="img/hero.jpg" alt="BalanceFeed – dein täglicher Begleiter: Roter Panda auf einem Baumstumpf" width="1168" height="784" fetchpriority="high">
+  <img class="appicon" src="img/app_icon.png" alt="" width="72" height="72" loading="lazy">
   <h1>BalanceFeed</h1>
   <p class="sub">Dein achtsamer Begleiter für den Alltag. Jeden Tag eine kleine, persönliche Auswahl an Impulsen – abgestimmt auf Wetter, Herzfrequenz und Schritte. Ein Tipp auf den Hauptknopf genügt.</p>
   <a class="btn" href="https://play.google.com/store/apps/details?id=com.balancefeed.app">Kostenlos bei Google Play laden</a>
@@ -107,6 +113,17 @@ footer a{color:var(--muted)}
   <h2>Neuigkeiten</h2>
   <ul class="updates">
     <li>
+      <div class="ver"><strong>Version 2.2.0</strong><span class="date">Oktober 2026</span></div>
+      <ul>
+        <li>📓 Selbst-Checks (WHO-5, Atemtests, Fitnesstests &amp; Co.) geben jetzt einen kleinen Balance-Bonus für den ersten abgeschlossenen Test am Tag</li>
+        <li>🌊 Neues Knopf-Erlebnis: sinkt beim Antippen kurz ab, wackelt wie ein Schwimmer auf dem Wasser (echte gedämpfte Physik), während sanfte Wellen in der Farbe deines Begleiters über den Bildschirm laufen</li>
+        <li>🌱 Balance Seed: die Umgebung deines Begleiters – Bambus, Palme oder Zimmerpflanze – wächst jetzt sichtbar mit deiner Streak</li>
+        <li>📊 Fortschritt-Bildschirm neu gestaltet: wachsendes Aquarell-Baumbild im Hintergrund, "Heute"-Ring mit echtem Blumenfoto gefüllt</li>
+        <li>🎨 Frisches Hintergrundbild für alle vier Einführungsschritte</li>
+        <li>🛠️ Kleinere Verbesserungen und mehr Stabilität</li>
+      </ul>
+    </li>
+    <li>
       <div class="ver"><strong>Version 2.0.5</strong><span class="date">September 2026</span></div>
       <ul>
         <li>📓 Neu: Ein-Zeilen-Tagebuch – halte abends eine gute Sache deines Tages fest, dazu ein täglicher Stimmungs-Check-in</li>
@@ -128,7 +145,6 @@ footer a{color:var(--muted)}
   <a class="btn" href="https://play.google.com/store/apps/details?id=com.balancefeed.app">Jetzt bei Google Play</a>
   <p><a href="https://www.instagram.com/balance_feed/" rel="me">@balance_feed auf Instagram</a></p>
 </section>
-  https://Kasianovb.github.io/.well-known/assetlinks.json
 </main>
 
 <footer><div class="w">
